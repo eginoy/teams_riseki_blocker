@@ -2,9 +2,7 @@
 var robot = require("robotjs");
 
 const oneMinutes = 1000 * 60;
-// const waitTime = oneMinutes * 2;
-const waitTime = 2000;
-
+const waitTime = oneMinutes * 2;
 
 monitoringMousePosition();
 console.log('マウスカーソル位置を監視しています。');
@@ -20,7 +18,7 @@ async function monitoringMousePosition(){
 		currentMousePosition.y === mousePosition.y
 	)
 	{
-		robot.moveMouseSmooth(currentMousePosition.x + 100, currentMousePosition.y + 100);
+		robot.moveMouseSmooth(currentMousePosition.x + 50, currentMousePosition.y + 50);
 	}
 	monitoringMousePosition();
 }
